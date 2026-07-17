@@ -649,13 +649,37 @@ button { font-family: inherit; font-weight: inherit; }
 }
 .cashier-hint {
   text-align: center;
-  font-size: .78rem;
-  color: var(--muted);
-  background: var(--cream-light);
-  border: 1px solid var(--border);
-  padding: 8px;
-  border-radius: var(--radius-sm);
-  font-weight: 500;
+  font-size: 0.85rem;
+  color: var(--coffee);
+  background: linear-gradient(135deg, rgba(242, 101, 34, 0.08), rgba(192, 38, 45, 0.08));
+  border: 2px dashed var(--orange);
+  padding: 12px;
+  border-radius: var(--radius-md);
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 4px 12px rgba(242, 101, 34, 0.05);
+  margin-top: 12px;
+  animation: hint-glow 2s infinite ease-in-out;
+}
+@keyframes hint-glow {
+  0%, 100% { box-shadow: 0 4px 12px rgba(242, 101, 34, 0.05); border-color: var(--orange); }
+  50% { box-shadow: 0 4px 16px rgba(242, 101, 34, 0.15); border-color: var(--red); }
+}
+.cashier-hint svg {
+  color: var(--orange);
+  flex-shrink: 0;
+  animation: bell-ring 1.5s infinite ease-in-out;
+}
+@keyframes bell-ring {
+  0%, 100% { transform: rotate(0); }
+  15% { transform: rotate(15deg); }
+  30% { transform: rotate(-15deg); }
+  45% { transform: rotate(10deg); }
+  60% { transform: rotate(-10deg); }
+  75% { transform: rotate(0); }
 }
 
 /* =============================================
@@ -1223,6 +1247,97 @@ button { font-family: inherit; font-weight: inherit; }
   color: var(--red);
 }
 
+/* Welcome Popup Modal styles */
+.welcome-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 12, 5, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 1200;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.welcome-overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+.welcome-modal {
+  background: var(--surface);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 20px 50px rgba(46, 35, 24, 0.25);
+  width: 90%;
+  max-width: 400px;
+  padding: 32px 24px;
+  text-align: center;
+  border: 1.5px solid var(--border);
+  transform: scale(0.9);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.welcome-overlay.show .welcome-modal {
+  transform: scale(1);
+}
+.welcome-icon-wrap {
+  width: 64px;
+  height: 64px;
+  background: rgba(242, 101, 34, 0.1);
+  color: var(--orange);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin-bottom: 8px;
+  animation: welcome-bounce 2.5s infinite ease-in-out;
+}
+@keyframes welcome-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.welcome-title {
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: var(--coffee);
+  letter-spacing: -0.5px;
+}
+.welcome-message {
+  font-size: 0.95rem;
+  color: var(--coffee);
+  line-height: 1.6;
+  font-weight: 700;
+}
+.welcome-message strong {
+  color: var(--red);
+  font-weight: 800;
+}
+.btn-welcome-ok {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, var(--red), var(--red-dark));
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-weight: 800;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 12px rgba(192, 38, 45, 0.25);
+  margin-top: 8px;
+}
+.btn-welcome-ok:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 6px 16px rgba(192, 38, 45, 0.35);
+}
+.btn-welcome-ok:active {
+  transform: scale(0.97);
+}
 
 </style>
 </head>
@@ -1233,11 +1348,11 @@ button { font-family: inherit; font-weight: inherit; }
 if (typeof menuItems === 'undefined' || typeof menuCategories === 'undefined') {
   window.menuCategories = [
     { key: 'all', label: 'All Items' },
-    { key: 'burgers', label: 'Burgers ðŸ”' },
-    { key: 'chicken', label: 'Chicken ðŸ—' },
-    { key: 'sides', label: 'Sides ðŸŸ' },
-    { key: 'drinks', label: 'Drinks ðŸ¥¤' },
-    { key: 'desserts', label: 'Desserts ðŸ°' }
+    { key: 'burgers', label: 'Burgers 🍔' },
+    { key: 'chicken', label: 'Chicken 🍗' },
+    { key: 'sides', label: 'Sides 🍟' },
+    { key: 'drinks', label: 'Drinks 🥤' },
+    { key: 'desserts', label: 'Desserts 🍰' }
   ];
   window.menuItems = [
     { id: 1, name: "Classic Cheeseburger", category: "burgers", price: 8.99, image: "", desc: "menu-data.js not found." }
@@ -1312,7 +1427,13 @@ if (typeof menuItems === 'undefined' || typeof menuCategories === 'undefined') {
       <div class="totals">
         <div class="totals-row grand"><span>Total Amount</span><span id="tTotal">â‚¹0</span></div>
       </div>
-      <div class="cashier-hint">Show this screen to the cashier when ordering</div>
+      <div class="cashier-hint">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+          <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+        </svg>
+        Show this screen to the cashier when ordering
+      </div>
     </div>
   </aside>
 </div>
@@ -1355,6 +1476,21 @@ if (typeof menuItems === 'undefined' || typeof menuCategories === 'undefined') {
   <div class="confirm-actions">
     <button class="btn-confirm-cancel" onclick="closeConfirmModal()">Cancel</button>
     <button class="btn-confirm-ok" id="confirmOkBtn">Yes</button>
+  </div>
+</div>
+
+<!-- ============ WELCOME POPUP MODAL ============ -->
+<div class="welcome-overlay" id="welcomeOverlay">
+  <div class="welcome-modal" id="welcomeModal">
+    <div class="welcome-icon-wrap">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+      </svg>
+    </div>
+    <div class="welcome-title">Counter Ordering Info</div>
+    <div class="welcome-message">Add the Food item to tray and show it to the Front counter</div>
+    <button class="btn-welcome-ok" onclick="closeWelcomePopup()">OK</button>
   </div>
 </div>
 
@@ -1862,7 +1998,20 @@ function closeConfirmModal() {
   }
 }
 
+/* ---------- Welcome Popup Logic ---------- */
+function checkWelcomePopup() {
+  if (!sessionStorage.getItem('welcomeShown')) {
+    $('welcomeOverlay').classList.add('show');
+    document.body.style.overflow = 'hidden';
+  }
+}
+function closeWelcomePopup() {
+  $('welcomeOverlay').classList.remove('show');
+  document.body.style.overflow = '';
+  sessionStorage.setItem('welcomeShown', 'true');
+}
 
+checkWelcomePopup();
 renderChips();
 renderMenu();
 renderPanel();

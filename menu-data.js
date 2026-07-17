@@ -27,7 +27,6 @@ const menuCategories = [
   { key: 'momo',    label: 'Momo 🥟' },
   { key: 'noodles', label: 'Noodles 🍝' },
   { key: 'rice',    label: 'Rice 🍚' },
-  { key: 'thukpa',  label: 'Thukpa 🍲' },
   { key: 'special', label: 'Specials 🍳' },
   { key: 'drinks',  label: 'Drinks 🥤' },
   { key: 'addons',  label: 'Add-ons ➕' },
@@ -152,7 +151,7 @@ const menuItems = [
   {
     id: 10,
     name: "Thukpa",
-    category: "thukpa",
+    category: "noodles",
     isVeg: false,
     desc: "Traditional Himalayan noodle soup.",
     variants: [
