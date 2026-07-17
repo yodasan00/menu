@@ -94,7 +94,7 @@ const menuItems = [
     desc: "Stir-fried noodles with fresh vegetables.",
     variants: [
       { key: "veg",     label: "Veg",     price: 140 },
-      { key: "egg",     label: "Egg",     price: 140 },
+      { key: "egg",     label: "Egg",     price: 150 },
       { key: "chicken", label: "Chicken", price: 160 },
       { key: "pork",    label: "Pork",    price: 200 },
       { key: "buff",    label: "Buff",    price: 200 }
@@ -141,7 +141,7 @@ const menuItems = [
     variants: [
       { key: "veg",     label: "Veg",     price: 140 },
       { key: "egg",     label: "Egg",     price: 150 },
-      { key: "chicken", label: "Chicken", price: 160 },
+      { key: "chicken", label: "Chicken", price: 150 },
       { key: "pork",    label: "Pork",    price: 180 },
       { key: "buff",    label: "Buff",    price: 190 }
     ]
@@ -156,7 +156,7 @@ const menuItems = [
     desc: "Traditional Himalayan noodle soup.",
     variants: [
       { key: "veg",     label: "Veg",     price: 140 },
-      { key: "egg",     label: "Egg",     price: 140 },
+      { key: "egg",     label: "Egg",     price: 150 },
       { key: "chicken", label: "Chicken", price: 160 },
       { key: "pork",    label: "Pork",    price: 200 },
       { key: "buff",    label: "Buff",    price: 200 }
