@@ -42,7 +42,6 @@ const menuItems = [
     name: "Steamed Momo",
     category: "momo",
     isVeg: false,
-    image: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=600&auto=format&fit=crop&q=60",
     desc: "Classic steamed dumplings served with spicy chutney.",
     variants: [
       { key: "chicken", label: "Chicken", price: 150 },
@@ -55,7 +54,6 @@ const menuItems = [
     name: "Jhol Momo",
     category: "momo",
     isVeg: false,
-    image: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=600&auto=format&fit=crop&q=60",
     desc: "Momo served in flavorful spicy sesame jhol.",
     variants: [
       { key: "chicken", label: "Chicken", price: 200 },
@@ -68,7 +66,6 @@ const menuItems = [
     name: "Chilli Momo",
     category: "momo",
     isVeg: false,
-    image: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=600&auto=format&fit=crop&q=60",
     desc: "Fried momo tossed in a bold spicy chilli sauce.",
     variants: [
       { key: "chicken", label: "Chicken", price: 210 },
@@ -81,7 +78,6 @@ const menuItems = [
     name: "Fried Momo",
     category: "momo",
     isVeg: false,
-    image: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=600&auto=format&fit=crop&q=60",
     desc: "Golden crispy fried dumplings.",
     variants: [
       { key: "chicken", label: "Chicken", price: 200 },
@@ -96,7 +92,6 @@ const menuItems = [
     name: "Chowmein",
     category: "noodles",
     isVeg: false,
-    image: "https://images.unsplash.com/photo-1585032226651-759b368d7246?w=600&auto=format&fit=crop&q=60",
     desc: "Stir-fried noodles with fresh vegetables.",
     variants: [
       { key: "veg",     label: "Veg",     price: 140 },
@@ -111,7 +106,6 @@ const menuItems = [
     name: "Crunchy Noodles",
     category: "noodles",
     isVeg: false,
-    image: "https://images.unsplash.com/photo-1585032226651-759b368d7246?w=600&auto=format&fit=crop&q=60",
     desc: "Crispy fried noodles topped with vegetable or chicken sauce.",
     variants: [
       { key: "veg",     label: "Vegetable", price: 160 },
@@ -124,7 +118,6 @@ const menuItems = [
     category: "noodles",
     price: 210,
     isVeg: false,
-    image: "https://images.unsplash.com/photo-1585032226651-759b368d7246?w=600&auto=format&fit=crop&q=60",
     desc: "Hot flavorful ramen noodle bowl."
   },
   {
@@ -132,7 +125,6 @@ const menuItems = [
     name: "Koka Noodles",
     category: "noodles",
     isVeg: false,
-    image: "https://images.unsplash.com/photo-1585032226651-759b368d7246?w=600&auto=format&fit=crop&q=60",
     desc: "Instant noodles prepared in choice of flavor.",
     variants: [
       { key: "veg",     label: "Veg",     price: 120 },
@@ -146,7 +138,6 @@ const menuItems = [
     name: "Fried Rice",
     category: "rice",
     isVeg: false,
-    image: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=600&auto=format&fit=crop&q=60",
     desc: "Wok-tossed fried rice with vegetables.",
     variants: [
       { key: "veg",     label: "Veg",     price: 140 },
@@ -163,7 +154,6 @@ const menuItems = [
     name: "Thukpa",
     category: "thukpa",
     isVeg: false,
-    image: "https://images.unsplash.com/photo-1547592165-e1d17fed6006?w=600&auto=format&fit=crop&q=60",
     desc: "Traditional Himalayan noodle soup.",
     variants: [
       { key: "veg",     label: "Veg",     price: 140 },
@@ -181,7 +171,6 @@ const menuItems = [
     category: "special",
     price: 40,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=600&auto=format&fit=crop&q=60",
     desc: "Golden pan-fried bread toast with melted butter."
   },
   {
@@ -189,7 +178,6 @@ const menuItems = [
     name: "Egg Omelette",
     category: "special",
     isVeg: false,
-    image: "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?w=600&auto=format&fit=crop&q=60",
     desc: "Fluffy egg omelette seasoned with onions and spices.",
     variants: [
       { key: "single", label: "Single Egg", price: 30 },
@@ -202,7 +190,6 @@ const menuItems = [
     category: "special",
     price: 120,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=600&auto=format&fit=crop&q=60",
     desc: "Crispy fries tossed in spicy peri-peri seasoning."
   },
   {
@@ -211,7 +198,6 @@ const menuItems = [
     category: "special",
     price: 100,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=600&auto=format&fit=crop&q=60",
     desc: "Golden crispy fries lightly seasoned with salt."
   },
   {
@@ -220,7 +206,6 @@ const menuItems = [
     category: "special",
     price: 200,
     isVeg: false,
-    image: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=600&auto=format&fit=crop&q=60",
     desc: "Spicy stir-fried chicken with peppers and onions."
   },
   {
@@ -229,7 +214,6 @@ const menuItems = [
     category: "special",
     price: 250,
     isVeg: false,
-    image: "https://images.unsplash.com/photo-1567620832903-9fc6debc209f?w=600&auto=format&fit=crop&q=60",
     desc: "Hot and spicy crispy chicken wings."
   },
   {
@@ -238,7 +222,6 @@ const menuItems = [
     category: "special",
     price: 200,
     isVeg: false,
-    image: "https://images.unsplash.com/photo-1635817290022-de9ecbf5eb6a?w=600&auto=format&fit=crop&q=60",
     desc: "Classic sweet and spicy chicken manchurian."
   },
   {
@@ -247,7 +230,6 @@ const menuItems = [
     category: "special",
     price: 220,
     isVeg: false,
-    image: "https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=600&auto=format&fit=crop&q=60",
     desc: "Crispy seasoned fried chicken lollipops."
   },
   {
@@ -256,7 +238,6 @@ const menuItems = [
     category: "special",
     price: 150,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1551782450-17144efb9c50?w=600&auto=format&fit=crop&q=60",
     desc: "Crunchy corn kernels tossed with spices, peppers and herbs."
   },
   {
@@ -265,7 +246,6 @@ const menuItems = [
     category: "special",
     price: 260,
     isVeg: false,
-    image: "https://images.unsplash.com/photo-1544025162-d76694265947?w=600&auto=format&fit=crop&q=60",
     desc: "Spicy stir-fried pork cooked with green chillies and onions."
   },
 
@@ -276,7 +256,6 @@ const menuItems = [
     category: "drinks",
     price: 50,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&auto=format&fit=crop&q=60",
     desc: "Freshly brewed coffee blended with creamy milk."
   },
   {
@@ -285,7 +264,6 @@ const menuItems = [
     category: "drinks",
     price: 40,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&auto=format&fit=crop&q=60",
     desc: "Classic espresso diluted with hot water."
   },
   {
@@ -294,7 +272,6 @@ const menuItems = [
     category: "drinks",
     price: 120,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=600&auto=format&fit=crop&q=60",
     desc: "Rich chocolate drink served hot or chilled."
   },
   {
@@ -303,7 +280,6 @@ const menuItems = [
     category: "drinks",
     price: 120,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=600&auto=format&fit=crop&q=60",
     desc: "Warm comforting tea infused with ginger, honey, and lemon."
   },
   {
@@ -312,7 +288,6 @@ const menuItems = [
     category: "drinks",
     price: 120,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&auto=format&fit=crop&q=60",
     desc: "Creamy iced cold coffee."
   },
   {
@@ -321,7 +296,6 @@ const menuItems = [
     category: "drinks",
     price: 120,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&auto=format&fit=crop&q=60",
     desc: "Refreshing chilled Americano served over ice."
   },
   {
@@ -329,7 +303,6 @@ const menuItems = [
     name: "Fresh Lime Soda / Water",
     category: "drinks",
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=600&auto=format&fit=crop&q=60",
     desc: "Chilled fresh lime prepared with soda or water.",
     variants: [
       { key: "water", label: "Lime Water", price: 60 },
@@ -342,7 +315,6 @@ const menuItems = [
     category: "drinks",
     price: 120,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=600&auto=format&fit=crop&q=60",
     desc: "Sweet and tangy green apple flavored soda."
   },
   {
@@ -351,7 +323,6 @@ const menuItems = [
     category: "drinks",
     price: 120,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=600&auto=format&fit=crop&q=60",
     desc: "Refreshing watermelon mojito with mint and lime."
   },
   {
@@ -360,7 +331,6 @@ const menuItems = [
     category: "drinks",
     price: 120,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=600&auto=format&fit=crop&q=60",
     desc: "Classic non-alcoholic mojito with mint and lime."
   },
   {
@@ -368,7 +338,6 @@ const menuItems = [
     name: "Iced Tea",
     category: "drinks",
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=600&auto=format&fit=crop&q=60",
     desc: "Chilled iced tea in your choice of flavor.",
     variants: [
       { key: "peach",      label: "Peach",      price: 120 },
@@ -381,7 +350,6 @@ const menuItems = [
     name: "Milkshake",
     category: "drinks",
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=600&auto=format&fit=crop&q=60",
     desc: "Thick and creamy milkshake in your choice of flavor.",
     variants: [
       { key: "mango",       label: "Mango",       price: 160 },
@@ -394,7 +362,6 @@ const menuItems = [
     name: "Coke",
     category: "drinks",
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=600&auto=format&fit=crop&q=60",
     desc: "Chilled coca-cola served regular or masala style.",
     variants: [
       { key: "regular", label: "Regular Coke", price: 40 },
@@ -407,7 +374,6 @@ const menuItems = [
     category: "drinks",
     price: 50,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&auto=format&fit=crop&q=60",
     desc: "Traditional hot tea served in an earthen clay pot."
   },
 
@@ -418,7 +384,6 @@ const menuItems = [
     category: "addons",
     price: 30,
     isVeg: false,
-    image: "https://images.unsplash.com/photo-1608039829572-78524f79c4c7?w=600&auto=format&fit=crop&q=60",
     desc: "Perfectly poached egg."
   },
   {
@@ -427,7 +392,6 @@ const menuItems = [
     category: "addons",
     price: 30,
     isVeg: false,
-    image: "https://images.unsplash.com/photo-1608039829572-78524f79c4c7?w=600&auto=format&fit=crop&q=60",
     desc: "Grilled chicken sausage."
   },
 
@@ -437,7 +401,6 @@ const menuItems = [
     name: "Combo Rice",
     category: "combo",
     isVeg: false,
-    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&auto=format&fit=crop&q=60",
     desc: "Rice combo served with sides.",
     variants: [
       { key: "chicken", label: "Chicken", price: 240 },
@@ -449,7 +412,6 @@ const menuItems = [
     name: "Combo Noodles",
     category: "combo",
     isVeg: false,
-    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&auto=format&fit=crop&q=60",
     desc: "Noodle combo served with sides.",
     variants: [
       { key: "chicken", label: "Chicken", price: 240 },
