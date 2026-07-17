@@ -141,7 +141,7 @@ const menuItems = [
     desc: "Wok-tossed fried rice with vegetables.",
     variants: [
       { key: "veg",     label: "Veg",     price: 140 },
-      { key: "egg",     label: "Egg",     price: 140 },
+      { key: "egg",     label: "Egg",     price: 150 },
       { key: "chicken", label: "Chicken", price: 160 },
       { key: "pork",    label: "Pork",    price: 180 },
       { key: "buff",    label: "Buff",    price: 190 }
